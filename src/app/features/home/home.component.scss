@@ -1,0 +1,386 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.home {
+  width: 100%;
+}
+
+
+
+// ==========================================================================
+// Logos Section
+// ==========================================================================
+.logos-section {
+  @include block-spacing;
+  background-color: $color-bg-primary;
+  border-bottom: 1px solid $color-border;
+
+  &__container {
+    @include site-container;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: $spacing-8;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0.6;
+    @include transition(opacity);
+    height: 100%;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 50px;
+  }
+}
+
+// ==========================================================================
+// Statistics Section
+// ==========================================================================
+.stats-section {
+  @include section-spacing;
+  background-color: $color-bg-tertiary;
+
+  &__container {
+    @include site-container;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-16;
+  }
+}
+
+.stat-card {
+  text-align: center;
+  padding: $spacing-8 $spacing-6;
+
+  &__value {
+    font-size: 64px;
+    font-weight: $font-weight-medium;
+    line-height: 1;
+    color: $color-text-primary;
+    margin-bottom: $spacing-6;
+    letter-spacing: 0;
+  }
+
+  &__label {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-relaxed;
+    color: $color-text-muted;
+    letter-spacing: 0;
+  }
+}
+
+// ==========================================================================
+// Testimonial Section
+// ==========================================================================
+.testimonial-section {
+  @include section-spacing;
+  background-color: $color-bg-primary;
+
+  &__container {
+    @include site-container;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  &__quote {
+    margin-bottom: $spacing-16;
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-normal;
+    line-height: 46px;
+    color: $color-text-primary;
+    text-align: center;
+
+    p {
+      margin: 0;
+      letter-spacing: 0;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: $spacing-6;
+    justify-content: center;
+  }
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: $radius-full;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    text-align: left;
+  }
+
+  &__name {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-medium;
+    line-height: 1;
+    color: $color-text-primary;
+    margin: 0 0 $spacing-2 0;
+    letter-spacing: 0;
+  }
+
+  &__title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-relaxed;
+    color: $color-text-muted;
+    margin: 0;
+    letter-spacing: 0;
+  }
+}
+
+// ==========================================================================
+// CTA Section
+// ==========================================================================
+.cta-section {
+  @include section-spacing;
+  background-color: $color-bg-subtle;
+  text-align: center;
+
+  &__container {
+    @include site-container;
+    max-width: 800px;
+  }
+
+  &__title {
+    font-size: $font-size-5xl;
+    font-weight: $font-weight-medium;
+    line-height: 52px;
+    color: $color-text-primary;
+    margin-bottom: $spacing-8;
+    letter-spacing: 0;
+  }
+
+  &__subtitle {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-relaxed;
+    color: $color-text-muted;
+    margin-bottom: $spacing-12;
+    letter-spacing: 0;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: $spacing-3 $spacing-8;
+    background-color: $color-cta;
+    color: $color-text-inverse;
+    border: none;
+    border-radius: $radius-sm;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-normal;
+    cursor: pointer;
+    @include transition(background-color);
+    letter-spacing: 0;
+
+    &:hover {
+      background-color: $color-cta-hover;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cta;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ==========================================================================
+// Solutions Section
+// ==========================================================================
+.solutions-section {
+  @include section-spacing;
+  background-color: $color-bg-primary;
+
+  &__container {
+    @include site-container;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: $font-weight-medium;
+    line-height: 1.2;
+    color: $color-text-primary;
+    text-align: center;
+    margin-bottom: $spacing-20;
+    letter-spacing: 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-12;
+  }
+}
+
+.solution-card {
+  padding: $spacing-12 $spacing-8;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  text-align: center;
+  @include transition(all);
+
+  &:hover {
+    border-color: $color-cta;
+    box-shadow: 0 4px 12px rgba(237, 41, 21, 0.1);
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-bg-tertiary;
+    border-radius: $radius-md;
+    color: $color-cta;
+  }
+
+  &__svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-normal;
+    color: $color-text-primary;
+    margin: 0 0 $spacing-4 0;
+    letter-spacing: 0;
+  }
+
+  &__description {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-relaxed;
+    color: $color-text-muted;
+    margin: 0;
+    letter-spacing: 0;
+  }
+}
+
+// ==========================================================================
+// Responsive
+// ==========================================================================
+@include breakpoint-down(xl) {
+
+
+  .logos-section {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $spacing-6;
+    }
+  }
+
+  .solutions-section {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-8;
+    }
+  }
+}
+
+@include breakpoint-down(lg) {
+
+
+  .logos-section {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-4;
+    }
+  }
+
+  .stats-section {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: $spacing-8;
+    }
+  }
+
+  .testimonial-section {
+    &__quote {
+      font-size: $font-size-2xl;
+      line-height: 36px;
+      margin-bottom: $spacing-8;
+    }
+
+    &__author {
+      flex-direction: column;
+    }
+
+    &__info {
+      text-align: center;
+    }
+  }
+
+  .cta-section {
+    &__title {
+      font-size: $font-size-4xl;
+      line-height: 44px;
+      margin-bottom: $spacing-6;
+    }
+  }
+
+  .solutions-section {
+    &__title {
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-12;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: $spacing-6;
+    }
+  }
+}
+
+@include breakpoint-down(md) {
+
+
+  .logos-section {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: $spacing-3;
+    }
+  }
+
+  .stat-card {
+    padding: $spacing-6 $spacing-4;
+
+    &__value {
+      font-size: $font-size-5xl;
+      margin-bottom: $spacing-4;
+    }
+  }
+
+  .solution-card {
+    padding: $spacing-8 $spacing-4;
+  }
+}

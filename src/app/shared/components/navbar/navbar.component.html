@@ -1,0 +1,48 @@
+<header class="navbar" role="banner">
+  <div class="navbar__container">
+    <!-- Logo -->
+    <a routerLink="/" class="navbar__logo" aria-label="AIntegrator Home">
+      <img [src]="logoSrc" alt="AIntegrator" width="152" height="29" class="navbar__logo-img" />
+    </a>
+
+    <!-- Navigation Menu (desktop) -->
+    <nav class="navbar__nav" aria-label="Main navigation">
+      <ul class="navbar__links">
+        <li><a routerLink="/product" routerLinkActive="navbar__link--active" class="navbar__link">LiaSuite</a></li>
+        <li><a routerLink="/about" routerLinkActive="navbar__link--active" class="navbar__link">Über uns</a></li>
+        <li><a routerLink="/careers" routerLinkActive="navbar__link--active" class="navbar__link">Karriere</a></li>
+        <li><a routerLink="/contact" routerLinkActive="navbar__link--active" class="navbar__link">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- CTA Text Button (desktop) -->
+    <a routerLink="/contact" class="navbar__cta" aria-label="Termin vereinbaren">
+      <span class="navbar__cta-text">Termin vereinbaren</span>
+      <img [src]="arrowIconSrc" alt="" aria-hidden="true" class="navbar__cta-icon" />
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="navbar__toggle" type="button" [attr.aria-expanded]="mobileMenuOpen" aria-controls="mobile-menu"
+      aria-label="Toggle navigation menu" (click)="toggleMobileMenu()">
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu" class="navbar__mobile" [class.navbar__mobile--open]="mobileMenuOpen">
+    <nav aria-label="Mobile navigation">
+      <ul class="navbar__mobile-links">
+        <li><a routerLink="/product" class="navbar__mobile-link" (click)="closeMobileMenu()">LiaSuite</a></li>
+        <li><a routerLink="/about" class="navbar__mobile-link" (click)="closeMobileMenu()">Über uns</a></li>
+        <li><a routerLink="/careers" class="navbar__mobile-link" (click)="closeMobileMenu()">Karriere</a></li>
+        <li><a routerLink="/contact" class="navbar__mobile-link" (click)="closeMobileMenu()">Kontakt</a></li>
+      </ul>
+      <a routerLink="/contact" class="navbar__mobile-cta" (click)="closeMobileMenu()">
+        <span>Termin vereinbaren</span>
+        <img [src]="arrowIconSrc" alt="" aria-hidden="true" />
+      </a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Alntegrator Landing Page</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#EF4444", // Tailwind Red-500 equivalent, adjusted for vibrancy
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#111111",
+                        "surface-light": "#F9FAFB", // Very light gray for blocks
+                        "surface-dark": "#1F2937",
+                        "text-main-light": "#111827",
+                        "text-main-dark": "#F9FAFB",
+                        "text-muted-light": "#6B7280",
+                        "text-muted-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "0.75rem",
+                    },
+                    spacing: {
+                        '196': '196px', // Specific measurement from prompt
+                        '148': '148px', // Specific measurement from prompt
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .dot-grid {
+            background-image: radial-gradient(#E5E7EB 2px, transparent 2px);
+            background-size: 24px 24px;
+        }
+
+        .dark .dot-grid {
+            background-image: radial-gradient(#374151 2px, transparent 2px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark transition-colors duration-200">
+    <nav class="w-full max-w-[1400px] mx-auto px-6 py-8 flex items-center justify-between">
+        <div class="font-bold text-xl tracking-tight">Alntegrator</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-text-muted-light dark:text-text-muted-dark">
+            <a class="hover:text-primary transition-colors" href="#">Produkte</a>
+            <a class="hover:text-primary transition-colors" href="#">Über uns</a>
+            <a class="hover:text-primary transition-colors" href="#">Karriere</a>
+            <a class="hover:text-primary transition-colors" href="#">Kontakt</a>
+        </div>
+        <a class="text-sm font-medium text-primary hover:text-red-600 transition-colors flex items-center gap-1"
+            href="#">
+            Termin vereinbaren
+            <span class="material-icons-outlined text-base" style="font-size: 14px;">arrow_outward</span>
+        </a>
+    </nav>
+    <header class="relative pt-24 pb-32 overflow-hidden">
+        <div class="absolute left-4 top-1/2 -translate-y-1/2 w-32 h-64 dot-grid opacity-60 hidden xl:block"></div>
+        <div class="absolute right-4 top-1/2 -translate-y-1/2 w-48 h-64 dot-grid opacity-60 hidden xl:block"></div>
+        <div class="max-w-4xl mx-auto text-center px-4 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-semibold mb-8 leading-tight">
+                AI-Integration mit<br />messbarer Wirkung
+            </h1>
+            <p
+                class="text-lg md:text-xl text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto leading-relaxed">
+                Wir helfen Unternehmen, Künstliche Intelligenz in ihre Prozesse zu integrieren – von der strategischen
+                Beratung bis zu vollständigen AI-Lösungen.
+            </p>
+        </div>
+    </header>
+    <section
+        class="max-w-6xl mx-auto px-4 pb-196 flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+        <div class="text-2xl font-serif font-bold">real</div>
+        <div class="text-xl font-serif tracking-widest">LE TEMPS</div>
+        <div class="flex flex-col items-center font-bold leading-none border-2 border-current p-1 text-xs">
+            <span>RTS</span>
+            <span class="text-lg">TATAKI</span>
+        </div>
+        <div class="flex items-center gap-2 text-xl font-semibold">
+            <span class="material-icons-outlined">school</span> EHL
+        </div>
+        <div class="text-2xl font-black tracking-tighter">sav</div>
+    </section>
+    <section class="max-w-[1200px] mx-auto px-4 mb-196">
+        <div
+            class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-1/3 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="bg-red-100 dark:bg-red-900 text-primary p-1 rounded text-xs">🏛️</span>
+                        <span
+                            class="text-xs font-semibold text-text-muted-light dark:text-text-muted-dark uppercase tracking-wide">Kanton
+                            Wallis</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Staatliche Agenten</h3>
+                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-6">
+                        70% der Arbeit automatisiert – ohne Umstellungszwang. Unsere AI-Agenten fügen sich harmonisch in
+                        <span class="font-semibold text-text-main-light dark:text-text-main-dark">die bestehenden
+                            Prozesse einer kantonalen Institution ein.</span>
+                    </p>
+                </div>
+                <a class="text-sm font-medium text-primary hover:text-red-600 transition-colors inline-flex items-center gap-1 mt-auto"
+                    href="#">
+                    Fallstudie lesen
+                    <span class="material-icons-outlined" style="font-size: 14px;">arrow_outward</span>
+                </a>
+            </div>
+            <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl md:col-span-2 shadow-sm">
+                    <div class="text-4xl md:text-5xl font-semibold mb-2">70%</div>
+                    <div class="text-sm text-text-muted-light dark:text-text-muted-dark">Prozessbeschleunigung</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm">
+                    <div class="text-4xl md:text-5xl font-semibold mb-2">45%</div>
+                    <div class="text-sm text-text-muted-light dark:text-text-muted-dark">Kostenreduktion</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm">
+                    <div class="text-4xl md:text-5xl font-semibold mb-2">3x</div>
+                    <div class="text-sm text-text-muted-light dark:text-text-muted-dark">Schnellere Umsetzung</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-3xl mx-auto px-6 text-center mb-196">
+        <blockquote class="text-xl md:text-2xl leading-relaxed font-medium mb-10">
+            "Endlich jemand, der nicht nur Technik verkauft, sondern unsere Arbeit ernst nimmt. Alntegrator hat uns
+            zugehört und dann passende Lösungen entwickelt."
+        </blockquote>
+        <div class="flex items-center justify-center gap-4">
+            <img alt="Danièle Bovier" class="w-12 h-12 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEJbv56_hRc4x1UnLMV15ZQhBCOIgyo8woKuWRi2kPsl_j2rJ4EJmBNSaWs0vX9wuw7cE2kvivkouSk166YegU-zpIvLWCzGqn5KyevfD1-EbV8J8o9rH3pzBsGWfTkRjUAEt1Pk1cwLPxgCnwLLsyUV-QsP09ANsfPD-Jcrwio5TcHbSz1c4Y-xLQS1zc8Lkl2yPIU9I82lOal3JKZEmfj2wvqDvT4Z1Bg1YMAz4M1ILbow8gJ-uakt3d7EH-2UjODecHMxUu5zA" />
+            <div class="text-left">
+                <div class="font-semibold text-sm">Danièle Bovier</div>
+                <div class="text-xs text-text-muted-light dark:text-text-muted-dark">Kommunikation, Kanton Wallis</div>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-[1200px] mx-auto px-4 mb-196">
+        <div class="bg-surface-light dark:bg-surface-dark rounded-xl p-10 md:p-16">
+            <h3 class="text-2xl font-semibold mb-4">AI-Tools, entstanden aus der Praxis</h3>
+            <p class="text-text-muted-light dark:text-text-muted-dark max-w-2xl mb-8 leading-relaxed">
+                In unseren Projekten haben wir gelernt, was Unternehmen wirklich brauchen. Daraus ist die LiaSuite
+                entstanden, AI-Tools, die Sie sofort einsetzen können.
+            </p>
+            <a class="text-sm font-medium text-primary hover:text-red-600 transition-colors inline-flex items-center gap-1"
+                href="#">
+                Mehr erfahren
+                <span class="material-icons-outlined" style="font-size: 14px;">arrow_outward</span>
+            </a>
+        </div>
+    </section>
+    <section class="max-w-4xl mx-auto px-4 mb-196 text-center">
+        <h2 class="text-3xl font-semibold mb-16">Unser Ansatz</h2>
+        <div class="relative flex justify-between items-start max-w-2xl mx-auto">
+            <div class="absolute top-5 left-0 w-full h-[2px] bg-gray-200 dark:bg-gray-700 -z-10"></div>
+            <div class="flex flex-col items-center group cursor-default">
+                <div
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted-light dark:text-text-muted-dark flex items-center justify-center font-semibold mb-4 border border-gray-200 dark:border-gray-700">
+                    1</div>
+                <h4 class="font-semibold mb-2">Plan</h4>
+                <p class="text-xs text-text-muted-light dark:text-text-muted-dark max-w-[140px]">Wir identifizieren
+                    gemeinsam, wo KI echten Mehrwert schafft.</p>
+            </div>
+            <div class="flex flex-col items-center group cursor-default">
+                <div
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted-light dark:text-text-muted-dark flex items-center justify-center font-semibold mb-4 border border-gray-200 dark:border-gray-700">
+                    2</div>
+                <h4 class="font-semibold mb-2">Build</h4>
+                <p class="text-xs text-text-muted-light dark:text-text-muted-dark max-w-[140px]">Wir entwickeln und
+                    integrieren robuste, produktionsreife KI-Lösungen.</p>
+            </div>
+            <div class="flex flex-col items-center group cursor-default">
+                <div
+                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold mb-4 shadow-lg shadow-red-200 dark:shadow-red-900">
+                    3</div>
+                <h4 class="font-semibold mb-2">Improve</h4>
+                <p class="text-xs text-text-muted-light dark:text-text-muted-dark max-w-[140px]">Wir optimieren
+                    kontinuierlich für nachhaltige Wirkung.</p>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-[1200px] mx-auto px-4 mb-196">
+        <div class="bg-surface-light dark:bg-surface-dark rounded-xl p-10 md:p-16">
+            <div class="w-10 h-10 bg-red-600 rounded flex items-center justify-center mb-6">
+                <span class="text-white text-2xl font-bold">+</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Hosted in Switzerland</h3>
+            <p class="text-text-muted-light dark:text-text-muted-dark max-w-2xl leading-relaxed">
+                Ihre Daten bleiben unter Ihrer Kontrolle. Datensouveränität und Datensicherheit haben für uns höchste
+                Priorität.
+            </p>
+        </div>
+    </section>
+    <section class="text-center pb-32 px-4 relative overflow-hidden">
+        <div class="absolute left-4 bottom-0 w-32 h-64 dot-grid opacity-60 hidden xl:block"></div>
+        <div class="absolute right-4 bottom-0 w-32 h-64 dot-grid opacity-60 hidden xl:block"></div>
+        <div class="max-w-2xl mx-auto relative z-10">
+            <h2 class="text-3xl md:text-5xl font-semibold mb-6 leading-tight">
+                Zeit für AI-Integration mit messbarer Wirkung
+            </h2>
+            <p class="text-text-muted-light dark:text-text-muted-dark mb-10 leading-relaxed">
+                Investieren Sie 30 Minuten in die Zukunft Ihres Unternehmens: Wir zeigen Ihnen konkrete Erfolgsbeispiele
+                und wie Ihre AI-Transformation reibungslos gelingt.
+            </p>
+            <a class="inline-flex items-center gap-2 text-primary font-medium hover:text-red-600 transition-colors text-lg"
+                href="#">
+                Termin vereinbaren
+                <span class="material-icons-outlined" style="font-size: 18px;">arrow_outward</span>
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>
