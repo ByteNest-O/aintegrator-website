@@ -1,0 +1,14 @@
+<div class="w-full relative mt-[196px]">
+    <div class="site-container relative mx-auto md:h-[134px] md:overflow-hidden h-auto overflow-visible">
+        <div
+            class="flex items-center flex-wrap justify-center w-full gap-[40px] pr-0 animate-none md:flex-nowrap md:justify-start md:w-max md:gap-[60px] md:pr-[60px] md:animate-[scroll-left_35s_linear_infinite] lg:gap-[80px] lg:pr-[80px] lg:animate-[scroll-left_25s_linear_infinite]">
+            @for (logo of logos; track $index) {
+            <div class="flex-shrink-0 flex items-center justify-center opacity-80 md:opacity-60 mix-blend-luminosity">
+                <img [src]="logo.src" [alt]="logo.alt" class="object-contain block max-h-[80px] w-auto" />
+            </div>
+            }
+        </div>
+        <div class="logo-fade-left hidden md:block"></div>
+        <div class="logo-fade-right hidden md:block"></div>
+    </div>
+</div>

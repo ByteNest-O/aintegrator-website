@@ -1,0 +1,9 @@
+@use '../variables' as *;
+
+@mixin section-spacing {
+    @apply mt-section;
+}
+
+@mixin block-spacing {
+    @apply mt-block;
+}

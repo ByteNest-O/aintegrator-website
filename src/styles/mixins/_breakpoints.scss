@@ -1,0 +1,84 @@
+@use '../tokens/breakpoints' as *;
+
+// Responsive breakpoints
+@mixin breakpoint-up($bp) {
+    @if $bp ==xs {
+        @media (min-width: $breakpoint-xs) {
+            @content;
+        }
+    }
+
+    @else if $bp ==sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $bp ==md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $bp ==lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    }
+
+    @else if $bp ==xl {
+        @media (min-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+
+    @else if $bp ==2xl {
+        @media (min-width: $breakpoint-2xl) {
+            @content;
+        }
+    }
+
+    @else if $bp ==3xl {
+        @media (min-width: $breakpoint-3xl) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-down($bp) {
+    @if $bp ==xs {
+        @media (max-width: calc($breakpoint-xs - 1px)) {
+            @content;
+        }
+    }
+
+    @else if $bp ==sm {
+        @media (max-width: calc($breakpoint-sm - 1px)) {
+            @content;
+        }
+    }
+
+    @else if $bp ==md {
+        @media (max-width: calc($breakpoint-md - 1px)) {
+            @content;
+        }
+    }
+
+    @else if $bp ==lg {
+        @media (max-width: calc($breakpoint-lg - 1px)) {
+            @content;
+        }
+    }
+
+    @else if $bp ==xl {
+        @media (max-width: calc($breakpoint-xl - 1px)) {
+            @content;
+        }
+    }
+
+    @else if $bp ==2xl {
+        @media (max-width: calc($breakpoint-2xl - 1px)) {
+            @content;
+        }
+    }
+}

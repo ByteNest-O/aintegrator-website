@@ -1,0 +1,10 @@
+@use '../tokens/colors' as *;
+
+// ===========================
+// Complex Gradients
+// ===========================
+// centralized gradient mixins here
+@mixin gradient-primary {
+    // Example placeholder
+    background: linear-gradient(180deg, $color-bg-dark 0%, $color-primary 100%);
+}

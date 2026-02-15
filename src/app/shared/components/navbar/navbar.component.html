@@ -1,45 +1,64 @@
-<header class="navbar" role="banner">
-  <div class="navbar__container">
-    <!-- Logo -->
-    <a routerLink="/" class="navbar__logo" aria-label="AIntegrator Home">
-      <img [src]="logoSrc" alt="AIntegrator" width="152" height="29" class="navbar__logo-img" />
+<header class="w-full bg-bg-primary sticky top-0 z-50">
+  <div class="mx-auto flex h-[42px] max-w-[1144px] items-center justify-between mt-12 px-6 lg:px-0">
+    <a routerLink="/" class="flex flex-shrink-0 items-center transition-opacity duration-300 hover:opacity-80"
+      aria-label="AIntegrator Home">
+      <img [src]="logoSrc" alt="AIntegrator" width="152" height="29" class="h-[29.083px] w-[152px] object-contain" />
     </a>
 
-    <!-- Navigation Menu (desktop) -->
-    <nav class="navbar__nav" aria-label="Main navigation">
-      <ul class="navbar__links">
-        <li><a routerLink="/product" routerLinkActive="navbar__link--active" class="navbar__link">LiaSuite</a></li>
-        <li><a routerLink="/about" routerLinkActive="navbar__link--active" class="navbar__link">Über uns</a></li>
-        <li><a routerLink="/careers" routerLinkActive="navbar__link--active" class="navbar__link">Karriere</a></li>
-        <li><a routerLink="/contact" routerLinkActive="navbar__link--active" class="navbar__link">Kontakt</a></li>
+    <nav class="hidden md:inline-flex items-center" aria-label="Main navigation">
+      <ul class="flex items-center gap-[28px] w-[340px] h-[26px] flex-shrink-0 list-none m-0 p-0">
+        <li><a routerLink="/product" routerLinkActive="font-medium text-text-primary"
+            class="text-text-body font-sans text-[16px] font-normal leading-[26px] no-underline whitespace-nowrap transition-colors duration-300 hover:text-text-primary">LiaSuite</a>
+        </li>
+        <li><a routerLink="/about" routerLinkActive="font-medium text-text-primary"
+            class="text-text-body font-sans text-[16px] font-normal leading-[26px] no-underline whitespace-nowrap transition-colors duration-300 hover:text-text-primary">Über
+            uns</a></li>
+        <li><a routerLink="/careers" routerLinkActive="font-medium text-text-primary"
+            class="text-text-body font-sans text-[16px] font-normal leading-[26px] no-underline whitespace-nowrap transition-colors duration-300 hover:text-text-primary">Karriere</a>
+        </li>
+        <li><a routerLink="/contact" routerLinkActive="font-medium text-text-primary"
+            class="text-text-body font-sans text-[16px] font-normal leading-[26px] no-underline whitespace-nowrap transition-colors duration-300 hover:text-text-primary">Kontakt</a>
+        </li>
       </ul>
     </nav>
 
-    <!-- CTA Text Button (desktop) -->
-    <a routerLink="/contact" class="navbar__cta" aria-label="Termin vereinbaren">
-      <span class="navbar__cta-text">Termin vereinbaren</span>
-      <img [src]="arrowIconSrc" alt="" aria-hidden="true" class="navbar__cta-icon" />
+    <a routerLink="/contact"
+      class="hidden md:inline-flex items-center no-underline whitespace-nowrap cursor-pointer transition-opacity duration-300 hover:opacity-80"
+      aria-label="Termin vereinbaren">
+      <span class="text-cta font-sans text-[14px] font-medium w-[139px] text-right truncate">Termin vereinbaren</span>
+      <img [src]="arrowIconSrc" alt="" aria-hidden="true" />
     </a>
 
-    <!-- Mobile Menu Toggle -->
-    <button class="navbar__toggle" type="button" [attr.aria-expanded]="mobileMenuOpen" aria-controls="mobile-menu"
+    <button
+      class="flex md:hidden flex-col justify-center gap-[5px] w-8 h-8 p-1 bg-transparent border-none cursor-pointer"
+      type="button" [attr.aria-expanded]="mobileMenuOpen" aria-controls="mobile-menu"
       aria-label="Toggle navigation menu" (click)="toggleMobileMenu()">
-      <span class="navbar__toggle-bar"></span>
-      <span class="navbar__toggle-bar"></span>
-      <span class="navbar__toggle-bar"></span>
+      <span class="block w-full h-[2px] bg-text-primary rounded-sm transition-all duration-300"></span>
+      <span class="block w-full h-[2px] bg-text-primary rounded-sm transition-all duration-300"></span>
+      <span class="block w-full h-[2px] bg-text-primary rounded-sm transition-all duration-300"></span>
     </button>
   </div>
 
-  <!-- Mobile Menu Drawer -->
-  <div id="mobile-menu" class="navbar__mobile" [class.navbar__mobile--open]="mobileMenuOpen">
-    <nav aria-label="Mobile navigation">
-      <ul class="navbar__mobile-links">
-        <li><a routerLink="/product" class="navbar__mobile-link" (click)="closeMobileMenu()">LiaSuite</a></li>
-        <li><a routerLink="/about" class="navbar__mobile-link" (click)="closeMobileMenu()">Über uns</a></li>
-        <li><a routerLink="/careers" class="navbar__mobile-link" (click)="closeMobileMenu()">Karriere</a></li>
-        <li><a routerLink="/contact" class="navbar__mobile-link" (click)="closeMobileMenu()">Kontakt</a></li>
+  <div id="mobile-menu" class="hidden md:hidden block max-h-0 overflow-hidden transition-all duration-300"
+    [class.max-h-[400px]]="mobileMenuOpen">
+    <nav aria-label="Mobile navigation" class="bg-bg-primary px-6 pb-6">
+      <ul class="flex flex-col gap-4 list-none m-0 py-6">
+        <li><a routerLink="/product"
+            class="block text-lg font-normal text-text-body no-underline py-2 transition-colors duration-300 hover:text-text-primary"
+            (click)="closeMobileMenu()">LiaSuite</a></li>
+        <li><a routerLink="/about"
+            class="block text-lg font-normal text-text-body no-underline py-2 transition-colors duration-300 hover:text-text-primary"
+            (click)="closeMobileMenu()">Über uns</a></li>
+        <li><a routerLink="/careers"
+            class="block text-lg font-normal text-text-body no-underline py-2 transition-colors duration-300 hover:text-text-primary"
+            (click)="closeMobileMenu()">Karriere</a></li>
+        <li><a routerLink="/contact"
+            class="block text-lg font-normal text-text-body no-underline py-2 transition-colors duration-300 hover:text-text-primary"
+            (click)="closeMobileMenu()">Kontakt</a></li>
       </ul>
-      <a routerLink="/contact" class="navbar__mobile-cta" (click)="closeMobileMenu()">
+      <a routerLink="/contact"
+        class="inline-flex items-center p-0 mb-6 bg-transparent text-cta no-underline text-base font-medium transition-opacity duration-300 hover:opacity-80"
+        (click)="closeMobileMenu()">
         <span>Termin vereinbaren</span>
         <img [src]="arrowIconSrc" alt="" aria-hidden="true" />
       </a>

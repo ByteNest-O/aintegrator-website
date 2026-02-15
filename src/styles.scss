@@ -1,7 +1,5 @@
-/* SCSS Architecture — must come before any CSS output */
+/* SCSS Architecture */
 @use 'styles/variables';
 @use 'styles/mixins';
 @use 'styles/globals';
-
-/* Tailwind CSS — Using @use to avoid Sass @import deprecation */
-@use 'tailwindcss';
+@config "../tailwind.config.js";

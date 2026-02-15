@@ -1,187 +1,116 @@
 @use '../../../../styles/variables' as *;
 @use '../../../../styles/mixins' as *;
+@use '../../../../styles/tailwind-setup.css';
+@config "../../../../../tailwind.config.js";
 
 .footer {
-    background-color: $color-bg-subtle;
-    border-top: 1px solid $color-border;
+    @apply bg-bg-subtle border-t border-border;
 
     &__container {
         @include site-container;
-        padding-top: $spacing-16;
-        padding-bottom: $spacing-16;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: $spacing-16;
-        align-items: start;
+        @apply py-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-start;
     }
 
     &__logo {
-        grid-column: 1;
+        @apply col-start-1;
     }
 
     &__logo-link {
-        display: inline-block;
-        @include transition(opacity);
+        @apply inline-block transition-opacity duration-300;
 
         &:hover {
-            opacity: 0.8;
+            @apply opacity-80;
         }
 
         &:focus-visible {
-            outline: 2px solid $color-accent;
-            outline-offset: 2px;
+            @include focus-ring;
         }
 
         img {
-            display: block;
-            height: auto;
+            @apply block h-auto;
         }
     }
 
     &__nav {
-        grid-column: 2;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: $spacing-12;
+        @apply col-start-1 md:col-start-2 grid grid-cols-1 md:grid-cols-3 gap-12;
     }
 
     &__col {
         &:not(:last-child) {
-            margin-bottom: 0;
+            @apply mb-0;
         }
     }
 
     &__heading {
-        font-size: $font-size-sm;
-        font-weight: $font-weight-medium;
-        color: $color-text-muted;
-        line-height: 1;
-        margin: 0 0 $spacing-8 0;
-        text-transform: capitalize;
+        @apply text-sm font-medium text-text-muted leading-none mb-8 capitalize font-sans;
     }
 
     &__links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: $spacing-8;
+        @apply list-none p-0 m-0 flex flex-col gap-8;
 
         a {
-            font-size: $font-size-sm;
-            font-weight: $font-weight-normal;
-            color: $color-text-primary;
-            text-decoration: none;
-            @include transition(color);
+            @apply text-sm font-normal text-primary no-underline transition-colors duration-300;
 
             &:hover {
-                color: $color-cta;
+                @apply text-cta;
             }
 
             &:focus-visible {
-                outline: 2px solid $color-accent;
-                outline-offset: 2px;
+                @include focus-ring;
             }
         }
     }
 
     &__members {
-        grid-column: 1 / -1;
-        padding-top: $spacing-8;
+        @apply col-span-full pt-8;
     }
 
     &__members-label {
-        font-size: $font-size-sm;
-        font-weight: $font-weight-medium;
-        color: $color-text-muted;
-        margin: 0 0 $spacing-4 0;
+        @apply text-sm font-medium text-text-muted mb-4 font-sans;
     }
 
     &__members-logos {
-        display: flex;
-        gap: $spacing-6;
-        align-items: center;
-        flex-wrap: wrap;
+        @apply flex gap-6 items-center flex-wrap;
     }
 
     &__member-logo {
-        height: 30px;
-        width: auto;
-        opacity: 0.6;
-        @include transition(opacity);
+        @apply h-[30px] w-auto opacity-60 transition-opacity duration-300;
 
         &:hover {
-            opacity: 0.9;
+            @apply opacity-90;
         }
     }
 
     &__divider {
-        border: none;
-        border-top: 1px solid $color-border;
-        margin: $spacing-8 0;
+        @apply border-none border-t border-border my-8;
     }
 
     &__bottom {
-        background-color: $color-bg-subtle;
-        padding: $spacing-8 0;
-        border-top: 1px solid $color-border;
+        @apply bg-bg-subtle py-8 border-t border-border;
     }
 
     &__bottom-container {
         @include site-container;
-        @include flex-between;
+        @apply flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-center md:text-left;
     }
 
     &__copyright {
-        font-size: $font-size-sm;
-        font-weight: $font-weight-normal;
-        color: $color-text-muted;
-        margin: 0;
+        @apply text-sm font-normal text-text-muted m-0 font-sans;
     }
 
     &__legal-links {
-        display: flex;
-        gap: $spacing-12;
+        @apply flex gap-12 justify-center md:justify-start;
 
         a {
-            font-size: $font-size-sm;
-            font-weight: $font-weight-normal;
-            color: $color-text-muted;
-            text-decoration: none;
-            @include transition(color);
+            @apply text-sm font-normal text-text-muted no-underline transition-colors duration-300;
 
             &:hover {
-                color: $color-text-primary;
+                @apply text-primary;
             }
 
             &:focus-visible {
-                outline: 2px solid $color-accent;
-                outline-offset: 2px;
+                @include focus-ring;
             }
-        }
-    }
-}
-
-@include breakpoint-down(md) {
-    .footer {
-        &__container {
-            grid-template-columns: 1fr;
-        }
-
-        &__nav {
-            grid-column: 1;
-            grid-template-columns: 1fr;
-        }
-
-        &__bottom-container {
-            flex-direction: column;
-            gap: $spacing-4;
-            text-align: center;
-        }
-
-        &__legal-links {
-            justify-content: center;
         }
     }
 }

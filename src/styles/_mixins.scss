@@ -1,136 +1,14 @@
 // ==========================================================================
-// Mixins
+// Mixins (Forwarding)
 // ==========================================================================
 
+@forward 'mixins/container';
+@forward 'mixins/gradients';
+@forward 'mixins/overlays';
+@forward 'mixins/breakpoints';
+@forward 'mixins/spacing';
+
 @use 'variables' as *;
-
-// Responsive breakpoints
-@mixin breakpoint-up($bp) {
-    @if $bp ==xs {
-        @media (min-width: $breakpoint-xs) {
-            @content;
-        }
-    }
-
-    @else if $bp ==sm {
-        @media (min-width: $breakpoint-sm) {
-            @content;
-        }
-    }
-
-    @else if $bp ==md {
-        @media (min-width: $breakpoint-md) {
-            @content;
-        }
-    }
-
-    @else if $bp ==lg {
-        @media (min-width: $breakpoint-lg) {
-            @content;
-        }
-    }
-
-    @else if $bp ==xl {
-        @media (min-width: $breakpoint-xl) {
-            @content;
-        }
-    }
-
-    @else if $bp ==2xl {
-        @media (min-width: $breakpoint-2xl) {
-            @content;
-        }
-    }
-
-    @else if $bp ==3xl {
-        @media (min-width: $breakpoint-3xl) {
-            @content;
-        }
-    }
-}
-
-@mixin breakpoint-down($bp) {
-    @if $bp ==xs {
-        @media (max-width: calc($breakpoint-xs - 1px)) {
-            @content;
-        }
-    }
-
-    @else if $bp ==sm {
-        @media (max-width: calc($breakpoint-sm - 1px)) {
-            @content;
-        }
-    }
-
-    @else if $bp ==md {
-        @media (max-width: calc($breakpoint-md - 1px)) {
-            @content;
-        }
-    }
-
-    @else if $bp ==lg {
-        @media (max-width: calc($breakpoint-lg - 1px)) {
-            @content;
-        }
-    }
-
-    @else if $bp ==xl {
-        @media (max-width: calc($breakpoint-xl - 1px)) {
-            @content;
-        }
-    }
-
-    @else if $bp ==2xl {
-        @media (max-width: calc($breakpoint-2xl - 1px)) {
-            @content;
-        }
-    }
-}
-
-// ===========================
-// Layout — Site Container
-// ===========================
-// Reusable container: max-width 1144px, centered, responsive padding
-@mixin site-container {
-    width: 100%;
-    max-width: $container-max-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $spacing-6; // 1.5rem (24px) default
-    padding-right: $spacing-6;
-
-    @include breakpoint-up(lg) {
-        padding-left: $spacing-8; // 2rem (32px) on large
-        padding-right: $spacing-8;
-    }
-
-    @include breakpoint-up(2xl) {
-        padding-left: 0; // At 1440px+ viewport, margins handle centering
-        padding-right: 0;
-    }
-}
-
-// Section spacing — primary (196px between major sections)
-@mixin section-spacing {
-    padding-top: $spacing-20; // 80px fallback for smaller screens
-    padding-bottom: $spacing-20;
-
-    @include breakpoint-up(xl) {
-        padding-top: $section-gap;
-        padding-bottom: $section-gap;
-    }
-}
-
-// Block spacing — secondary (148px between content blocks)
-@mixin block-spacing {
-    padding-top: $spacing-16; // 64px fallback for smaller screens
-    padding-bottom: $spacing-16;
-
-    @include breakpoint-up(xl) {
-        padding-top: $block-gap;
-        padding-bottom: $block-gap;
-    }
-}
 
 // Typography
 @mixin heading($size, $weight: $font-weight-bold, $line-height: $line-height-tight) {

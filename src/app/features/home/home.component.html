@@ -1,110 +1,18 @@
-<div class="home">
+<div class="w-full">
   <!-- Hero Section -->
   <!-- Hero Section -->
   <app-hero></app-hero>
 
   <!-- Logos Section -->
-  <section class="logos-section">
-    <div class="logos-section__container">
-      <h2 class="sr-only">Partner und Kunden</h2>
-      <div class="logos-section__grid">
-        <div *ngFor="let logo of partnerLogos" class="logos-section__item">
-          <img [src]="logo.src" [alt]="logo.alt" class="logos-section__logo" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Logo Carousel Section -->
+  <app-logo-carousel></app-logo-carousel>
 
-  <!-- Statistics Section -->
-  <section class="stats-section">
-    <div class="stats-section__container">
-      <h2 class="sr-only">Unsere Erfolge in Zahlen</h2>
-      <div class="stats-section__grid">
-        <div *ngFor="let stat of stats" class="stat-card">
-          <div class="stat-card__value">{{ stat.value }}</div>
-          <div class="stat-card__label">{{ stat.label }}</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Case Study Section -->
+  <app-case-study></app-case-study>
 
   <!-- Testimonial Section -->
-  <section class="testimonial-section">
-    <div class="testimonial-section__container">
-      <blockquote class="testimonial-section__quote">
-        <p>
-          Endlich jemand, der nicht nur Technik verkauft, sondern unsere Arbeit
-          ernst nimmt. AIntegrator hat uns zugehört und dann passende Lösungen
-          entwickelt.
-        </p>
-      </blockquote>
-      <div class="testimonial-section__author">
-        <img [src]="testimonialImage" alt="Danièle Bovier" class="testimonial-section__avatar" />
-        <div class="testimonial-section__info">
-          <h3 class="testimonial-section__name">Danièle Bovier</h3>
-          <p class="testimonial-section__title">
-            Kommunikation, Kanton Wallis
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-testimonial></app-testimonial>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__container">
-      <h2 class="cta-section__title">Zeit für AI-Integration mit<br />messbarer Wirkung</h2>
-      <p class="cta-section__subtitle">
-        Unternehmen vertrauen darauf, dass wir ihre AI-Integrationsziele
-        erreichbar machen und kontinuierlich verfeinern:
-      </p>
-      <button class="cta-section__button">Termin vereinbaren</button>
-    </div>
-  </section>
-
-  <!-- Solutions Section -->
-  <section class="solutions-section">
-    <div class="solutions-section__container">
-      <h2 class="solutions-section__title">Unser Ansatz</h2>
-      <div class="solutions-section__grid">
-        <div class="solution-card">
-          <div class="solution-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" />
-            </svg>
-          </div>
-          <h3 class="solution-card__title">Plan</h3>
-          <p class="solution-card__description">
-            Strategische Planung und Beratung für Ihre AI-Integration
-          </p>
-        </div>
-        <div class="solution-card">
-          <div class="solution-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
-              <polyline points="12 12 20 7.5" />
-              <polyline points="12 12 12 21" />
-              <polyline points="12 12 4 7.5" />
-            </svg>
-          </div>
-          <h3 class="solution-card__title">Build</h3>
-          <p class="solution-card__description">
-            Entwicklung und Implementierung von maßgeschneiderten Lösungen
-          </p>
-        </div>
-        <div class="solution-card">
-          <div class="solution-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
-          </div>
-          <h3 class="solution-card__title">Improve</h3>
-          <p class="solution-card__description">
-            Kontinuierliche Optimierung und Verbesserung der Ergebnisse
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- CTA Card Section -->
+  <app-cta-card></app-cta-card>
 </div>

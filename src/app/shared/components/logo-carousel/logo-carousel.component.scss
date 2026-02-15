@@ -1,0 +1,37 @@
+.logo-fade-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 176px;
+    height: 130px;
+    background: linear-gradient(90deg,
+            #ffffff 30.42%,
+            rgba(255, 255, 255, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.logo-fade-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    width: 176px;
+    height: 130px;
+    background: linear-gradient(90deg,
+            #ffffff 30.42%,
+            rgba(255, 255, 255, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
