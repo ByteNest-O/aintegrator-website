@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+    selector: 'app-final-cta',
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: './final-cta.component.html',
+    styleUrl: './final-cta.component.scss'
+})
+export class FinalCtaComponent { }

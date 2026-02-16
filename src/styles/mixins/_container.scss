@@ -1,25 +1,21 @@
 @use '../tokens/spacing' as *;
 @use 'breakpoints' as *;
 
-// ===========================
-// Layout — Site Container
-// ===========================
-// Reusable container: max-width 1144px, centered, responsive padding
 @mixin site-container {
     width: 100%;
     max-width: $container-max-width;
     margin-left: auto;
     margin-right: auto;
-    padding-left: $spacing-6; // 1.5rem (24px) default
+    padding-left: $spacing-6;
     padding-right: $spacing-6;
 
     @include breakpoint-up(lg) {
-        padding-left: $spacing-8; // 2rem (32px) on large
+        padding-left: $spacing-8;
         padding-right: $spacing-8;
     }
 
     @include breakpoint-up(2xl) {
-        padding-left: 0; // At 1440px+ viewport, margins handle centering
+        padding-left: 0;
         padding-right: 0;
     }
 }

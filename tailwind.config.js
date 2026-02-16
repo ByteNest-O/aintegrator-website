@@ -27,9 +27,9 @@ module.exports = {
                 sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
             },
             spacing: {
-                '37': '9.25rem',   // 148px — block spacing
-                '49': '12.25rem',  // 196px — section spacing
-                'site': '1144px',  // Content width
+                '37': '9.25rem',
+                '49': '12.25rem',
+                'site': '1144px',
                 'section': '196px',
                 'block': '148px',
             },
@@ -37,7 +37,7 @@ module.exports = {
                 primary: '#000000',
                 secondary: '#111827',
                 accent: '#2563eb',
-                cta: '#D32F2F', // Updated per requirements
+                cta: '#D32F2F',
                 'cta-hover': '#c92410',
 
                 'text-primary': '#000000',
@@ -56,7 +56,7 @@ module.exports = {
                 'border-light': '#f3f4f6',
             },
             maxWidth: {
-                'site': '1144px',  // Design grid content width
+                'site': '1144px',
             },
             screens: {
                 'xs': '375px',

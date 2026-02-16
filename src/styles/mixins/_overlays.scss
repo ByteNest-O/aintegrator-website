@@ -1,9 +1,4 @@
-// ===========================
-// Overlays & Simulations
-// ===========================
-
 @mixin bird-simulation-overlay {
-    // Logic to be extracted from components
     position: absolute;
     top: 0;
     left: 0;

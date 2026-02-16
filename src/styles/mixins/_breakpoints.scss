@@ -1,6 +1,5 @@
 @use '../tokens/breakpoints' as *;
 
-// Responsive breakpoints
 @mixin breakpoint-up($bp) {
     @if $bp ==xs {
         @media (min-width: $breakpoint-xs) {

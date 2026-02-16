@@ -1,15 +1,7 @@
-// ==========================================================================
-// Global Styles — Base Resets & Defaults
-// ==========================================================================
-
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'tailwind-setup.css';
 
-// Tailwind directives removed (v4 migration)
-
-
-// HTML & Body
 @layer base {
     html {
         @apply scroll-smooth antialiased;
@@ -20,7 +12,6 @@
         @apply font-sans text-base font-normal leading-normal text-text-primary bg-bg-primary overflow-x-hidden;
     }
 
-    // Typography defaults
     h1,
     h2,
     h3,
@@ -34,7 +25,6 @@
         @apply leading-normal;
     }
 
-    // Links
     a {
         @apply text-inherit no-underline;
 
@@ -43,7 +33,6 @@
         }
     }
 
-    // Buttons
     button {
         @apply cursor-pointer border-none bg-transparent font-[inherit] text-inherit;
 
@@ -52,7 +41,6 @@
         }
     }
 
-    // Inputs
     input,
     textarea,
     select {
@@ -64,57 +52,62 @@
     }
 }
 
-// ==========================================================================
-// Layout Utility Classes
-// ==========================================================================
-
-// Global site container
 .site-container {
-    @apply w-full max-w-site mx-auto px-[24px] md:px-[96px] xl:px-0;
+    width: 100%;
+    max-width: 1144px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @media (min-width: 768px) {
+        padding-left: 96px;
+        padding-right: 96px;
+    }
+
+    @media (min-width: 1280px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
-// Section spacing
 .section-spacing {
-    // Retaining mixin as requested
-    @include section-spacing;
+    margin-top: 96px;
+
+    @media (min-width: 768px) {
+        margin-top: 148px;
+    }
+
+    @media (min-width: 1280px) {
+        margin-top: 196px;
+    }
 }
 
-// Block spacing
 .block-spacing {
-    // Retaining mixin as requested
     @include block-spacing;
 }
 
-// ==========================================================================
-// Grid Utility Classes
-// ==========================================================================
-
-// 3-column grid (Approach / Solutions sections)
 .grid-3-col {
     @apply grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3;
 }
 
-// 2×2 stat grid
 .grid-2x2 {
     @apply grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16;
 }
 
-// 3-column stat grid
 .grid-3-stat {
     @apply grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16;
 }
 
-// Logo row — flexible carousel
 .logo-row {
     @apply grid grid-cols-2 gap-8 items-center justify-items-center md:grid-cols-3 lg:grid-cols-5;
 }
 
-// CTA centered layout
 .cta-centered {
     @apply text-center mx-auto max-w-[800px];
 }
 
-// Screen reader only
 .sr-only {
     @apply sr-only;
 }

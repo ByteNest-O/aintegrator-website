@@ -1,8 +1,5 @@
-// Spacing — Section & Block
-$section-gap: 196px; // Primary vertical gap between major sections
-$block-gap: 148px; // Secondary vertical gap between content blocks
-
-// Standard spacing (matches Tailwind scale)
+$section-gap: 196px;
+$block-gap: 148px;
 $spacing-0: 0;
 $spacing-1: 0.25rem;
 $spacing-2: 0.5rem;
@@ -18,6 +15,5 @@ $spacing-20: 5rem;
 $spacing-24: 6rem;
 $spacing-32: 8rem;
 
-// Layout — Grid & Container
 $container-max-width: 1144px;
 $container-padding-x: 148px;

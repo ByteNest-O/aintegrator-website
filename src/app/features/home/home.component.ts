@@ -7,6 +7,7 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { CtaCardComponent } from './cta-card/cta-card.component';
 import { ProcessStepsComponent } from '../../shared/components/process-steps/process-steps.component';
 import { SecurityCardComponent } from '../../shared/components/security-card/security-card.component';
+import { FinalCtaComponent } from './final-cta/final-cta.component';
 
 @Component({
     selector: 'app-home',
@@ -20,7 +21,8 @@ import { SecurityCardComponent } from '../../shared/components/security-card/sec
 
         CtaCardComponent,
         ProcessStepsComponent,
-        SecurityCardComponent
+        SecurityCardComponent,
+        FinalCtaComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',

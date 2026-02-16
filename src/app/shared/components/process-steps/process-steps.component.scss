@@ -8,33 +8,29 @@
 }
 
 .process-step-1 {
-    width: 289px;
+    width: 100%;
+    max-width: 289px;
     height: 196px;
 }
 
 .process-step-2 {
-    width: 310px;
+    width: 100%;
+    max-width: 310px;
     height: 196px;
 }
 
 .process-step-3 {
-    width: 262px;
+    width: 100%;
+    max-width: 262px;
     height: 196px;
 }
 
 @media (max-width: 768px) {
-    .process-step-1 {
-        width: 289px;
-        height: 169px;
-    }
 
-    .process-step-2 {
-        width: 310px;
-        height: 169px;
-    }
-
+    .process-step-1,
+    .process-step-2,
     .process-step-3 {
-        width: 289px;
-        height: 169px;
+        max-width: 100%;
+        height: auto;
     }
 }
