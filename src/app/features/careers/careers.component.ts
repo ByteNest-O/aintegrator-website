@@ -1,9 +1,55 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CareersHeroComponent } from './components/careers-hero/careers-hero.component';
+import { PrinciplesMvSectionComponent } from '../../shared/components/principles-mv-section/principles-mv-section.component';
+import { OpenRolesComponent } from './components/open-roles/open-roles.component';
+import { InitiativeCtaComponent } from './components/initiative-cta/initiative-cta.component';
 
 @Component({
     selector: 'app-careers',
     standalone: true,
-    template: `<section class="site-container section-spacing"><h1>Careers</h1></section>`,
-    styles: ``,
+    imports: [
+        CommonModule,
+        CareersHeroComponent,
+        PrinciplesMvSectionComponent,
+        OpenRolesComponent,
+        InitiativeCtaComponent
+    ],
+    templateUrl: './careers.component.html',
+    styleUrl: './careers.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CareersComponent { }
+export class CareersComponent {
+    roles = [
+        {
+            title: 'Intern Software Engineer',
+            department: 'Engineering',
+            location: 'Remote',
+            link: '#'
+        },
+        {
+            title: 'QA Engineer',
+            department: 'Engineering',
+            location: 'Remote',
+            link: '#'
+        },
+        {
+            title: 'Frontend Engineer',
+            department: 'Engineering',
+            location: 'Remote',
+            link: '#'
+        },
+        {
+            title: 'Backend Engineer',
+            department: 'Engineering',
+            location: 'Remote',
+            link: '#'
+        },
+        {
+            title: 'AI/ML Engineer',
+            department: 'Engineering',
+            location: 'Remote',
+            link: '#'
+        }
+    ];
+}

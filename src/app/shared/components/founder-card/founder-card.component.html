@@ -1,0 +1,25 @@
+<div
+    class="w-full rounded-[12px] bg-[#FAFAFA] p-[32px] sm:p-[48px] xl:p-[80px_160px_80px_80px] flex flex-col justify-center gap-[64px] sm:gap-[96px] xl:gap-[166px]">
+    <div class="flex items-center gap-[16px]">
+        <div
+            class="w-[58px] h-[58px] sm:w-[70px] sm:h-[70px] flex-shrink-0 relative rounded-full bg-[url('../../../../assets/icons/Ellipse\ 267.svg')] bg-contain bg-center bg-no-repeat">
+            <img [src]="avatar" [alt]="name"
+                class="w-[54.686px] h-[54.686px] sm:w-[64px] sm:h-[64px] rounded-full object-cover absolute top-[5.8px] sm:top-[7px] left-1/2 -translate-x-1/2">
+        </div>
+        <div>
+            <h3 class="text-[24px] font-medium text-[#000] m-0 font-['Poppins']">
+                {{ name }}
+            </h3>
+            <p
+                class="text-[14px] sm:text-[15px] xl:text-[16px] text-[rgba(77,77,77,0.7)] leading-[26px] m-0 font-['Poppins']">
+                {{ role }}
+            </p>
+        </div>
+    </div>
+
+    <a [href]="linkedin"
+        class="flex items-center text-[#D32F2F] text-[14px] font-medium no-underline w-fit hover:underline hover:opacity-80">
+        LinkedIn
+        <img src="assets/icons/Frame.svg" alt="LinkedIn" class="w-6 h-6">
+    </a>
+</div>

@@ -1,7 +1,9 @@
-<div class="main-layout">
-    <app-navbar />
-    <main class="main-layout__content" role="main">
-        <router-outlet />
+<div class="flex flex-col min-h-screen">
+    <app-navbar></app-navbar>
+
+    <main class="flex-1">
+        <router-outlet></router-outlet>
     </main>
-    <app-footer />
+
+    <app-footer></app-footer>
 </div>

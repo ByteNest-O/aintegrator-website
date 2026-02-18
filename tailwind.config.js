@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
         './src/**/*.{html,ts,scss}',
@@ -61,6 +60,17 @@ module.exports = {
             screens: {
                 'xs': '375px',
                 '3xl': '1920px',
+            },
+            keyframes: {
+                'scroll-left': {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-50%)' },
+                }
+            },
+            animation: {
+                'scroll-left': 'scroll-left 35s linear infinite',
+                'scroll-left-fast': 'scroll-left 25s linear infinite',
+                'scroll-mobile': 'scroll-left 20s linear infinite',
             },
         },
     },

@@ -1,4 +1,4 @@
-<section class="w-full mt-[96px] md:mt-[148px] xl:mt-[196px]">
+<section class="w-full section-spacing">
     <div class="site-container flex flex-col items-center">
         <h2 class="font-sans font-medium text-text-primary text-center
                    text-[28px] mb-[60px]
@@ -10,25 +10,28 @@
             class="relative w-full max-w-[1144px] flex flex-col md:flex-row md:items-start md:justify-center px-6 md:px-0">
 
             <ng-container *ngFor="let step of steps; let i = index; let last = last">
-                <div class="relative z-10 flex flex-col items-center text-center w-full"
-                    [ngClass]="'process-step-' + (i + 1)">
+                <div class="relative z-10 flex flex-col items-center text-center w-full h-auto md:h-[196px]" [ngClass]="{
+                        'max-w-full md:max-w-[289px]': i === 0,
+                        'max-w-full md:max-w-[310px]': i === 1,
+                        'max-w-full md:max-w-[262px]': i === 2
+                    }">
 
-                    <div class="process-ellipse flex items-center justify-center rounded-full transition-colors duration-300 border border-transparent mx-auto
+                    <div class="flex items-center justify-center rounded-full transition-colors duration-300 border border-transparent mx-auto
                                 w-[48px] h-[48px] min-w-[48px] min-h-[48px] mb-[18px]
                                 md:w-[56px] md:h-[56px] md:min-w-[56px] md:min-h-[56px] md:mb-[24px]"
-                        [ngClass]="step.active ? 'bg-cta text-white' : 'bg-bg-tertiary text-text-secondary'">
+                        [ngClass]="step.active ? 'bg-[#ED2915] text-white' : 'bg-[#F2F4F7] text-[#4D4D4D]'">
                         <span class="font-sans font-medium leading-none text-[24px]">
                             {{ step.number }}
                         </span>
                     </div>
 
-                    <div class="font-sans font-medium text-text-primary text-center
+                    <div class="font-sans font-medium text-[#000] text-center
                                 text-[24px] mb-[15px]
                                 md:text-[32px] md:mb-[16px]">
                         {{ step.title }}
                     </div>
 
-                    <p class="font-sans text-[16px] font-normal leading-[26px] text-text-secondary text-center mx-auto"
+                    <p class="font-sans text-[16px] font-normal leading-[26px] text-[#4D4D4D] text-center mx-auto"
                         [class.max-w-[310px]]="i === 1">
                         {{ step.desc }}
                     </p>
@@ -41,7 +44,9 @@
                             xl:w-[315px] xl:-mx-[87px]">
                 </div>
 
-                <div *ngIf="!last" class="md:hidden process-divider-vertical"></div>
+                <div *ngIf="!last"
+                    class="md:hidden w-[3px] h-[48px] bg-[#ECEFF2] rounded-[24px] my-[24px] mx-auto flex-shrink-0">
+                </div>
 
             </ng-container>
 

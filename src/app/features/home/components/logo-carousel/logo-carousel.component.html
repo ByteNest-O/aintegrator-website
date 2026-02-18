@@ -1,0 +1,25 @@
+<div class="w-full relative section-spacing">
+    <div class="site-container relative mx-auto h-[100px] md:h-[134px] overflow-hidden">
+        <div
+            class="flex items-center w-max justify-start pr-[48.51px] md:gap-[60px] md:pr-[60px] animate-scroll-mobile md:animate-scroll-left lg:gap-[80px] lg:pr-[80px] lg:animate-scroll-left-fast">
+            @for (logo of logos; track $index) {
+            <div class="flex-shrink-0 flex items-center justify-center opacity-80 md:opacity-60 mix-blend-luminosity">
+                <img [src]="logo.src" [alt]="logo.alt" class="object-contain block max-h-[80px] w-auto transition-all"
+                    [ngClass]="{
+                        'w-[84.76px] h-[21.19px] md:w-auto md:h-auto': ($index % 5) === 0,
+                        'w-[85.333px] h-[12.629px] md:w-auto md:h-auto': ($index % 5) === 1,
+                        'w-[55.016px] h-[23.767px] md:w-auto md:h-auto': ($index % 5) === 2,
+                        'w-[97.721px] h-[40.261px] md:w-auto md:h-auto': ($index % 5) === 3,
+                        'w-[85.000px] h-auto max-h-[28px] md:w-auto md:h-auto md:max-h-[80px]': ($index % 5) === 4
+                    }" />
+            </div>
+            }
+        </div>
+        <div
+            class="absolute left-0 top-1/2 -translate-y-1/2 w-[176px] h-[130px] bg-gradient-to-r from-white via-white/30 to-transparent z-10 pointer-events-none hidden md:block">
+        </div>
+        <div
+            class="absolute right-0 top-1/2 -translate-y-1/2 w-[176px] h-[130px] bg-gradient-to-l from-white via-white/30 to-transparent z-10 pointer-events-none hidden md:block">
+        </div>
+    </div>
+</div>

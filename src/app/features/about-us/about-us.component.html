@@ -1,0 +1,32 @@
+<div class="about-us-page">
+
+    <app-about-hero></app-about-hero>
+
+    <app-founders-grid-section [founders]="founders"></app-founders-grid-section>
+
+    <app-principles-mv-section [isPrinciplesDesktop]="false">
+        <div mission>
+            <p>Außergewöhnliche Produkte entstehen durch harte Arbeit – oft an unsichtbaren, wenig glamourösen
+                Themen.<br>Wir handeln mit Klarheit und Dringlichkeit und konzentrieren uns auf das, was wirklich zählt.
+            </p><br>
+            <p>Wir bleiben bodenständig und tun, was funktioniert. Gute Ideen zählen – unabhängig davon, woher sie
+                kommen.</p>
+        </div>
+        <div vision>
+            <p>Unsere Technologie soll einen echten, positiven Unterschied im Alltag der Menschen machen.</p>
+            <p>Nicht durch Versprechen, sondern durch Wirkung.</p>
+        </div>
+    </app-principles-mv-section>
+
+    <app-process-steps class="block"></app-process-steps>
+    <app-security-card class="block"></app-security-card>
+
+    <app-final-cta [title]="'Lassen Sie uns ins Gespräch kommen'"
+        [description]="'Investieren Sie 30 Minuten in die Zukunft Ihres Unternehmens: Wir zeigen Ihnen konkrete Erfolgsbeispiele und wie Ihre AI-Transformation reibungslos gelingt.'"
+        [secondaryBtnText]="'Entdecken Sie Karrieren'" [secondaryBtnLink]="'/careers'"
+        [secondaryBtnIcon]="'assets/icons/Frame.png'" [primaryBtnText]="'Termin vereinbaren'"
+        [primaryBtnLink]="'/contact'" [primaryBtnIcon]="'assets/icons/Frame.svg'" [showDecoration]="false"
+        class="block section-spacing">
+    </app-final-cta>
+
+</div>
