@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-privacy',
     standalone: true,
-    template: `<section class="site-container section-spacing"><h1>Privacy Policy</h1></section>`,
-    styles: ``,
+    imports: [CommonModule],
+    templateUrl: './privacy.component.html',
+    styleUrl: './privacy.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PrivacyComponent { }

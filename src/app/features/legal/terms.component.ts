@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-terms',
     standalone: true,
-    template: `<section class="site-container section-spacing"><h1>Terms of Service</h1></section>`,
-    styles: ``,
+    imports: [CommonModule],
+    templateUrl: './terms.component.html',
+    styleUrl: './terms.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TermsComponent { }
