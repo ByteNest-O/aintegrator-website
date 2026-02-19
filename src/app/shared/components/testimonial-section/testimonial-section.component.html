@@ -1,0 +1,31 @@
+<section class="w-full flex" [ngClass]="alignment() === 'center' ? 'justify-center' : 'justify-start'">
+    <div [ngClass]="fullWidth() ? 'w-full max-w-[1144px]' : 'site-container px-0'"
+        [ngClass]="alignment() === 'center' ? 'flex flex-col items-center' : 'flex flex-col items-start'">
+        <div class="w-full flex flex-col gap-[24px] md:gap-[40px] lg:gap-[60px]"
+            [ngClass]="[fullWidth() ? '' : 'max-w-[949px]', alignment() === 'center' ? 'items-center text-center' : 'items-start text-left']">
+
+            <blockquote
+                class="text-primary font-sans font-normal leading-normal m-0 p-0 text-[20px] md:text-[26px] lg:text-[32px] w-full max-w-[95%] md:max-w-none">
+                {{ quote() }}
+            </blockquote>
+
+            <div class="flex items-center gap-[8px] md:gap-[12px] lg:gap-[16px]">
+                <div
+                    class="w-[36px] h-[36px] md:w-[50px] md:h-[50px] lg:w-[70px] lg:h-[70px] rounded-full bg-[#FAFAFA] overflow-hidden relative flex-shrink-0 flex items-center justify-center lg:block">
+                    <img [src]="avatarUrl()" [alt]="author()" class="w-full h-full object-cover">
+                </div>
+
+                <div class="flex flex-col justify-center gap-0 lg:gap-[4px]">
+                    <span
+                        class="text-primary font-sans text-[16px] md:text-[20px] lg:text-[24px] font-medium leading-tight">
+                        {{ author() }}
+                    </span>
+                    <span
+                        class="text-text-secondary font-sans text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-normal">
+                        {{ role() }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

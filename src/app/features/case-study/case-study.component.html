@@ -1,0 +1,21 @@
+<div class="w-full bg-white pt-[96px] md:pt-[148px] xl:pt-[196px]">
+    <div class="site-container">
+        <app-case-study-hero></app-case-study-hero>
+
+        <div class="mb-[96px] md:mb-[148px] xl:mb-[196px]">
+            <app-case-study-stats [stats]="upperStats"></app-case-study-stats>
+        </div>
+
+        <div class="mb-[96px] md:mb-[148px] xl:mb-[196px]">
+            <app-case-study-content></app-case-study-content>
+        </div>
+
+        <div class="mb-[96px] md:mb-[148px] xl:mb-[196px]">
+            <app-case-study-stats [stats]="lowerStats" size="small"></app-case-study-stats>
+        </div>
+    </div>
+
+    <app-final-cta [showDecoration]="false" class="block pt-0"></app-final-cta>
+
+    <div class="section-spacing"></div>
+</div>
