@@ -1,24 +1,21 @@
 <section class="section-spacing w-full site-container">
-    <div class="flex flex-col lg:flex-row items-center justify-between gap-[40px] lg:gap-0">
+    <div class="flex flex-col xl:flex-row items-center justify-between gap-[40px] xl:gap-0">
 
         <div
-            class="w-full max-w-[323px] md:max-w-none lg:w-[320px] xl:w-[361px] lg:h-[180.5px] flex flex-col gap-[24px] lg:gap-[24.5px] items-center lg:items-start">
+            class="w-full max-w-[323px] md:max-w-[781px] xl:max-w-none xl:w-[445px] flex flex-col gap-[24px] items-center xl:items-start order-1 xl:order-1">
             <h2
-                class="text-[#000] text-center lg:text-left font-['Poppins',_sans-serif] text-[24px] min-[768px]:text-[28px] min-[1024px]:text-[30px] lg:text-[32px] font-medium leading-normal">
+                class="text-[#000] text-center xl:text-left font-['Poppins',_sans-serif] text-[24px] min-[768px]:text-[28px] min-[1024px]:text-[30px] xl:text-[32px] font-medium leading-normal">
                 Meeting-Transkription
             </h2>
 
-            <div class="relative flex flex-col items-center lg:items-start">
-                <p
-                    class="text-[#636970] text-center lg:text-left font-['Poppins',_sans-serif] text-[14px] min-[768px]:text-[18px] min-[1024px]:text-[20px] lg:text-[24px] font-normal leading-normal">
-                    Automatische Erfassung und Strukturierung von Gesprächen.
-                </p>
-
-            </div>
+            <p
+                class="text-center xl:text-left font-['Poppins',_sans-serif] text-[14px] min-[768px]:text-[18px] min-[1024px]:text-[20px] xl:text-[24px] font-normal leading-[148%]">
+                <span class="text-[#636970]">Automatische Erfassung und Strukturierung von Gesprächen.</span>
+            </p>
         </div>
 
         <div
-            class="w-full lg:w-[460px] xl:w-[567px] lg:h-[480px] xl:h-[567px] bg-[#F9F9F9] rounded-[24px] p-[32px] md:p-[60px] lg:p-[48px] xl:p-[80px] flex items-center justify-center">
+            class="w-full xl:w-[567px] xl:h-[567px] bg-[#F9F9F9] rounded-[24px] p-[32px] md:p-[60px] lg:p-[80px] flex items-center justify-center order-2 xl:order-2">
             <app-transcript-panel [transcriptData]="transcriptData" class="w-full"></app-transcript-panel>
         </div>
     </div>
