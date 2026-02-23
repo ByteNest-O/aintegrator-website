@@ -10,7 +10,8 @@
 
   <app-testimonial-section alignment="center"
     quote="Endlich jemand, der nicht nur Technik verkauft, sondern unsere Arbeit ernst nimmt. AIntegrator hat uns zugehört und dann passende Lösungen entwickelt."
-    author="Danièle Bovier" role="Kommunikation, Kanton Wallis" avatarUrl="assets/images/image 16.png">
+    author="Danièle Bovier" role="Kommunikation, Kanton Wallis" avatarUrl="assets/images/image 16.png"
+    mobileMaxWidth="max-sm:max-w-[354px]" mobileGap="gap-[32px]" mobileAuthorAlignment="items-start text-left">
   </app-testimonial-section>
 
   <app-cta-card></app-cta-card>
@@ -19,5 +20,7 @@
 
   <app-security-card></app-security-card>
 
-  <app-final-cta class="block pb-[96px] md:pb-[148px] xl:pb-[196px]"></app-final-cta>
+  <app-final-cta [showMobileDecoration]="true"
+    [mobileDecorationClass]="'w-[195px] h-auto top-[300px] left-[-40px] md:w-[300px] md:top-[300px] md:left-[0px] lg:top-[300px] opacity-100'"
+    class="block section-spacing"></app-final-cta>
 </div>

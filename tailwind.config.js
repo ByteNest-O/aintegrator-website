@@ -24,6 +24,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+                'neue-haas': ['"Neue Haas Grotesk Display Pro"', '"Neue Haas Grotesk Display"', '"Neue Haas Grotesk"', '"Helvetica Neue"', 'Helvetica', 'Inter', 'Arial', 'sans-serif'],
             },
             spacing: {
                 '37': '9.25rem',

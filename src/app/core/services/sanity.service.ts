@@ -17,24 +17,15 @@ export class SanityService {
         });
     }
 
-    /**
-     * Fetch data from Sanity using a GROQ query.
-     */
     async fetch<T>(query: string, params?: QueryParams): Promise<T> {
         return this.client.fetch<T>(query, params ?? {});
     }
 
-    /**
-     * Fetch a single document by its ID.
-     */
     async getById<T>(id: string): Promise<T> {
         const query = `*[_id == $id][0]`;
         return this.fetch<T>(query, { id });
     }
 
-    /**
-     * Fetch documents by type with optional ordering and limit.
-     */
     async getByType<T>(
         type: string,
         options?: { order?: string; limit?: number; offset?: number }
@@ -56,9 +47,6 @@ export class SanityService {
         return this.fetch<T[]>(query, { type });
     }
 
-    /**
-     * Fetch a single document by slug.
-     */
     async getBySlug<T>(type: string, slug: string): Promise<T> {
         const query = `*[_type == $type && slug.current == $slug][0]`;
         return this.fetch<T>(query, { type, slug });

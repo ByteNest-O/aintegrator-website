@@ -14,16 +14,12 @@ export class LocaleService {
     private readonly platformId = inject(PLATFORM_ID);
     private readonly isBrowser = isPlatformBrowser(this.platformId);
 
-    /** Current active locale */
     private readonly _currentLocale = signal<SupportedLocale>(this.resolveInitialLocale());
 
-    /** Reactive read-only accessor */
     readonly currentLocale = this._currentLocale.asReadonly();
 
-    /** All supported locales */
     readonly supportedLocales = environment.supportedLocales;
 
-    /** Human-readable locale labels */
     readonly localeLabels = computed(() => ({
         en: 'English',
         de: 'Deutsch',
@@ -31,9 +27,6 @@ export class LocaleService {
         it: 'Italiano',
     }));
 
-    /**
-     * Manually set the active locale and persist to cookie.
-     */
     setLocale(locale: SupportedLocale): void {
         this._currentLocale.set(locale);
         if (this.isBrowser) {
@@ -41,34 +34,25 @@ export class LocaleService {
         }
     }
 
-    /**
-     * Check if a locale is supported.
-     */
     isSupported(locale: string): locale is SupportedLocale {
         return (environment.supportedLocales as readonly string[]).includes(locale);
     }
 
-    /**
-     * Resolve the initial locale from cookie → browser → default.
-     */
     private resolveInitialLocale(): SupportedLocale {
         if (!this.isBrowser) {
             return environment.defaultLocale as SupportedLocale;
         }
 
-        // 1. Check cookie
         const cookieLocale = this.getCookie(LOCALE_COOKIE_KEY);
         if (cookieLocale && this.isSupported(cookieLocale)) {
             return cookieLocale;
         }
 
-        // 2. Detect browser language
         const browserLang = navigator.language?.split('-')[0];
         if (browserLang && this.isSupported(browserLang)) {
             return browserLang;
         }
 
-        // 3. Fallback to default
         return environment.defaultLocale as SupportedLocale;
     }
 

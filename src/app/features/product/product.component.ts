@@ -7,11 +7,16 @@ import { IntegrationsSectionComponent } from './components/integrations-section/
 import { MeetingTranscriptionComponent } from './components/meeting-transcription/meeting-transcription.component';
 import { MeetingSummaryComponent } from './components/meeting-summary/meeting-summary.component';
 import { AgenticActionsComponent } from './components/agentic-actions/agentic-actions.component';
+import { LiaChatComponent } from './components/lia-chat/lia-chat.component';
+import { BoltsSectionComponent } from './components/bolts-section/bolts-section.component';
+import { SecurityGridComponent } from '../../shared/components/security-grid/security-grid.component';
+import { PricingGridComponent } from '../../shared/components/pricing-grid/pricing-grid.component';
+import { FinalCtaComponent } from '../../shared/components/final-cta/final-cta.component';
 
 @Component({
     selector: 'app-product',
     standalone: true,
-    imports: [CommonModule, HeroComponent, InfoSectionComponent, MeetingAnalysisComponent, IntegrationsSectionComponent, MeetingTranscriptionComponent, MeetingSummaryComponent, AgenticActionsComponent],
+    imports: [CommonModule, HeroComponent, InfoSectionComponent, MeetingAnalysisComponent, IntegrationsSectionComponent, MeetingTranscriptionComponent, MeetingSummaryComponent, AgenticActionsComponent, LiaChatComponent, BoltsSectionComponent, SecurityGridComponent, PricingGridComponent, FinalCtaComponent],
     templateUrl: './product.component.html',
     styleUrl: './product.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

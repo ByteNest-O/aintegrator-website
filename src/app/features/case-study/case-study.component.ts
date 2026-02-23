@@ -5,10 +5,12 @@ import { CaseStudyContentComponent } from './components/case-study-content/case-
 import { CaseStudyStatsComponent, CaseStudyStat } from '../../shared/components/case-study-stats/case-study-stats.component';
 import { FinalCtaComponent } from '../../shared/components/final-cta/final-cta.component';
 
+import { RouterModule } from '@angular/router';
+
 @Component({
     selector: 'app-case-study',
     standalone: true,
-    imports: [CommonModule, CaseStudyStatsComponent, FinalCtaComponent, CaseStudyHeroComponent, CaseStudyContentComponent],
+    imports: [CommonModule, RouterModule, CaseStudyStatsComponent, FinalCtaComponent, CaseStudyHeroComponent, CaseStudyContentComponent],
     templateUrl: './case-study.component.html',
     styleUrl: './case-study.component.scss'
 })

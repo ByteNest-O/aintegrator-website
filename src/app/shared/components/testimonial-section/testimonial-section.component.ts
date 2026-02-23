@@ -15,4 +15,10 @@ export class TestimonialSectionComponent {
     readonly author = input.required<string>();
     readonly role = input.required<string>();
     readonly avatarUrl = input.required<string>();
+
+    readonly mobileGap = input<string>('gap-[24px]');
+    readonly mobileMaxWidth = input<string>('max-w-none');
+    readonly mobilePaddingClass = input<string>('px-0');
+    readonly mobileAuthorAlignment = input<string>('items-start text-left');
+    readonly sectionSpacingClass = input<string>('section-spacing');
 }
