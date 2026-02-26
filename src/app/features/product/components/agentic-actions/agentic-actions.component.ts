@@ -19,16 +19,16 @@ export class AgenticActionsComponent {
 
   readonly actionItems = [
     {
-      text: 'Follow up with the client about the new feature request',
-      date: '12th June 2025'
+      text: 'Beim Kunden bzgl. der neuen Funktion nachfassen',
+      date: '12. Februar 2026'
     },
     {
-      text: 'Summarize the key meetings takeaways',
-      date: '11th June 2025'
+      text: 'Die wichtigsten Erkenntnisse aus den Meetings zusammenfassen',
+      date: '11. Februar 2026'
     },
     {
-      text: 'Prepare proposal draft for next review',
-      date: '05th June 2025'
+      text: 'Entwurf des Vorschlags für das nächste Review vorbereiten',
+      date: '5. Februar 2026'
     }
   ];
 }
