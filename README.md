@@ -60,10 +60,10 @@ For more information on using the Angular CLI, including detailed command refere
 
 # Deployment
 ```bash
-docker build --platform=linux/amd64 -t azytaku/aintegrator-frontend:v0.0.1 -f Dockerfile .
+docker build --platform=linux/amd64 -t azytaku/aintegrator-frontend:testing.0.0.1 -f Dockerfile .
 ```
 
 ```bash
-docker push azytaku/aintegrator-frontend:v0.0.1
+docker push azytaku/aintegrator-frontend:testing.0.0.1
 ```
 

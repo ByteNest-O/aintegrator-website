@@ -1,4 +1,4 @@
-name: Push to STG CI
+name: Push to PRD CI
 
 on: 
   workflow_dispatch:
